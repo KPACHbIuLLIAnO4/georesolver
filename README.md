@@ -14,7 +14,6 @@ How to install (in work dir):
 - virtualenv .
 - . ./bin/activate
 - pip install twisted pysyge
-- mkdir resolver && cd resolver
 - git clone https://github.com/KPACHbIuLLIAnO4/georesolver
 - cd georesolver
 - python setup.py build 
