@@ -4,15 +4,31 @@ georesolver
 Simple asynchronous web server for resolving ip address into geo data using sypex geo database (https://sypexgeo.net).
 Requires twisted and pysyge library to be installed.
 
-How to install:
+Required:
 
+- python
+- virtualenv
+
+How to install (in work dir):
+
+- virtualenv .
+- . ./bin/activate
+- pip install twisted pysyge
+- mkdir resolver && cd resolver
+- git clone https://github.com/KPACHbIuLLIAnO4/georesolver
+- cd georesolver
+- python setup.py build 
 - python setup.py install
-- download file SxGeoCity.dat and put it into project root
-- adjust config/application.ini if needed 
+- (download file SxGeoCity.dat and put it into any accessible directory)
 
 How to start:
 
-- twistd resolver --config=./config/application.ini
+- twistd resolver --host localhost --port 8080 --file ./SxGeoCity.dat
+
+How to bind on all interfaces:
+
+- twistd resolver --host '' --port 8080 --file ./SxGeoCity.dat
+
 
 How to use:
 
