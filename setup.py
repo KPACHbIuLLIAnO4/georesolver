@@ -1,3 +1,4 @@
+
 __author__ = 'KPACHbIuLLIAnO4'
 
 import sys
@@ -29,7 +30,7 @@ if __name__ == '__main__':
     setup(
         name="resolver",
         version='1',
-        description="Geo resolver server.",
+        description="Resolves geo by ip address",
         author=__author__,
         author_email="KPACHbIuLLIAnO4@users.noreply.github.com",
         url="https://github.com/KPACHbIuLLIAnO4/georesolver",

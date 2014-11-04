@@ -1,6 +1,4 @@
 
-import ConfigParser
-
 from zope.interface import implements
 
 from twisted.python import usage
@@ -12,8 +10,15 @@ from resolver import resolver
 class Options(usage.Options):
     
     optParameters = [
-        ['config', None, None, "Application config"]
+        ['host',     'h', 'localhost', 'Local host for tcp socket'],
+        ['port',     'p', 8080,        'Local port for tcp socket', int],
+        ['resolver', 'r', 'sxgeo',     'Geo resolver. Only sxgeo supported'],
+        ['file',     'f', None,        'File with geo data']
     ]
+    
+    def postOptions(self):
+        if self['file'] is None:
+            raise usage.UsageError, "No geo file defined"
 
 class ResolverServiceMaker(object):
     implements(IServiceMaker, IPlugin)
@@ -24,10 +29,7 @@ class ResolverServiceMaker(object):
     
     def makeService(self, options):
         
-        config = ConfigParser.RawConfigParser();
-        config.read(options['config']);
-        
-        return resolver.makeService(config)
+        return resolver.makeService(options)
 
 serviceMaker = ResolverServiceMaker()
 
