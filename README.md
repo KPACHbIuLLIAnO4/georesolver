@@ -8,6 +8,7 @@ Required:
 
 - python
 - virtualenv
+- python-pip
 
 How to install (in work dir):
 
