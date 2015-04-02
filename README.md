@@ -21,8 +21,9 @@ How to install (in work dir):
 - python setup.py install
 - (download file SxGeoCity.dat and put it into any accessible directory)
 
-How to start:
+How to start (in work dir):
 
+- . ./bin/activate
 - twistd resolver --host localhost --port 8080 --file ./SxGeoCity.dat
 
 How to bind on all interfaces:
