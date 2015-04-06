@@ -4,10 +4,11 @@ georesolver
 Simple asynchronous web server for resolving ip address into geo data using sypex geo database (https://sypexgeo.net).
 Requires twisted and pysyge library to be installed.
 
-Required:
+Required packages (example for Ubuntu):
 
 - python
-- virtualenv
+- python-dev
+- python-virtualenv
 - python-pip
 
 How to install (in work dir):
