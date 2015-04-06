@@ -24,6 +24,7 @@ How to install (in work dir):
 How to start (in work dir):
 
 - . ./bin/activate
+- cd georesolver
 - twistd resolver --host localhost --port 8080 --file ./SxGeoCity.dat
 
 How to bind on all interfaces:
