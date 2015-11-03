@@ -28,6 +28,10 @@ How to start (in work dir):
 - cd georesolver
 - twistd resolver --host localhost --port 8080 --file ./SxGeoCity.dat
 
+How to shutdown:
+
+- kill \`cat twistd.pid\`
+
 How to bind on all interfaces:
 
 - twistd resolver --host '' --port 8080 --file ./SxGeoCity.dat
